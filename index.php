@@ -1,17 +1,25 @@
 <?php
+$months = 12;
+$wallet = 1000;
+$month_income = 700;
 
-// ERROR REPORTING
+for($i = 1; $i < $months; $i++ ){
+    $wallet += $month_income - rand(600, 1000);
 
-ini_set('display_errors', 1);
+    if ($wallet < 0){
+        break;
+    }
 
-ini_set('display_startup_errors', 1);
+}
+    $h1 = 'Wallet Forecast';
+    $h2 = "Atsargiai, $i mėnesį gali baigtis pinigai, pinigu balansas $wallet !";
 
-error_reporting(E_ALL);
+    if ($wallet > 0){
+        $h2 = "Po $i mėn., pinigu likutis $wallet !";
 
-include "app/php/php.php";
+    }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,10 +38,8 @@ include "app/php/php.php";
 
 <body>
 
-        <h1>Wallet Forecast</h1>
-        <h2>Po <?php print $months; ?> mėn. prognozuojamas likutis: <?php print $wallet; ?></h2>
-
-
+        <h2> <?php print $h1; ?></h2>
+        <h2> <?php print $h2; ?></h2>
 
 
     <!-- bootstrap js  -->
