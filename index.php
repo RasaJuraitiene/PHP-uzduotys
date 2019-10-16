@@ -13,7 +13,7 @@ $count_sun = 0;
 for ($i = 1; $i <= $days; $i++) {
 
     $today = date("Y-m-d");
-    $number = date('N', strtotime($today));
+    $number = date('N', strtotime("+$i days"));
 
     if ($number <= 5) {
         $count_mon_fri +=  rand(1, 3);
@@ -30,6 +30,7 @@ $count_ttl = $count_mon_fri + $count_sat + $count_sun;
 $price_ttl = $count_ttl / 20 * $pack_price;
 $h1 = 'Dainiaus dūmų skaičiuoklė:';
 $h2 = "Per $days dienas, Dainius surūkys $count_ttl cigarečių už $price_ttl eur. Išvada - laikas mesti rūkyti!:)";
+
 
 ?>
 
