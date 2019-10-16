@@ -17,13 +17,11 @@ for ($i = 1; $i <= $days; $i++) {
 
     if ($number <= 5) {
         $count_mon_fri +=  rand(1, 3);
-    }
-
-    if ($number == 6) {
+    }elseif ($number == 6) {
         $count_sat += rand(10, 20);
-    }
-
-    if ($number == 7) {
+    }elseif($number == 6) {
+        $count_sat += rand(10, 20);
+    }else{
         $count_sun += rand(1, 3);
     }
 }
