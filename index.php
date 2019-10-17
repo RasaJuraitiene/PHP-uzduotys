@@ -1,41 +1,17 @@
 <?php
 
-$days = 365;
-$pack_price = 3.50;
+$months = 24;
+$car_price_new = 30000;
+$depreciation = 2;
 
-$count_mon_fri = 0;
-$count_sat = 0;
-$count_sun = 0;
-$count_mon_thu = 0;
+for ($i = 1; $i <= $months; $i++)
+    $car_price_used = $car_price_new - $car_price_new / 2;
+    $depr_perc = $car_price_used * 100 / 30000;
 
-for ($i = 1; $i <= $days; $i++) {
-
-    $today = date("Y-m-d");
-    $number = date('N', strtotime("+$i days"));
-
-    if ($number <= 5) {
-        $count_mon_fri += rand(1, 3);
-    } elseif ($number == 6) {
-        $count_sat += rand(10, 20);
-    } elseif ($number == 6) {
-        $count_sat += rand(10, 20);
-    } else {
-        $count_sun += rand(1, 3);
-    }
-
-    if ($number <= 4) {
-        $count_mon_thu += rand(1, 3);
-    }
-
-}
-
-$count_ttl = $count_mon_fri + $count_sat + $count_sun;
-$price_ttl = $count_ttl / 20 * $pack_price;
-$price_mon_thu = $count_mon_thu / 20 * $pack_price;
-
-$h1 = 'Dainiaus dūmų skaičiuoklė:';
-$h2 = "Per $days dienas, Dainius surūkys $count_ttl cigarečių už $price_ttl eur. Išvada - laikas mesti rūkyti!:)";
-$h3 = "Nerūkydamas darbo dienomis, Dainius sutaupytų $price_mon_thu eur."
+$h1 = "Kiek nuvertės mašina?";
+$h2 = " Naujos mašinos kaina: $car_price_new";
+$h3 = "Po $months mėn, mašinos vertė bus: $car_price_used eur";
+$h4 = "Mašina nuvertės $depr_perc proc.";
 
 ?>
 <!DOCTYPE html>
@@ -48,9 +24,10 @@ $h3 = "Nerūkydamas darbo dienomis, Dainius sutaupytų $price_mon_thu eur."
 
 <body>
 
-<h2><?php print $h1; ?></h2>
+<h1><?php print $h1; ?></h1>
 <h2><?php print $h2; ?></h2>
-<h2><?php print $h3; ?></h2>
+<h3><?php print $h3; ?></h3>
+<h4><?php print $h4; ?></h4>
 
 </body>
 
