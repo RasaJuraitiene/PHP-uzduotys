@@ -1,39 +1,16 @@
 <?php
 $array = [
-    '1_turn' => [
-        'direction' => 'right',
-        'turn_extent' => 90,
-    ],
-    '2_turn' => [
-        'direction' => 'left',
-        'turn_extent' => 45,
-    ],
-    '3_turn' => [
-        'direction' => 'right',
-        'turn_extent' => 90,
-    ],
-    '4_turn' => [
-        'direction' => 'left',
-        'turn_extent' => 85,
-    ],
-    '5_turn' => [
-        [
-            'direction' => 'right',
-            'turn_extent' => 90
-        ],
-        [
-            'direction' => 'right',
-            'turn_extent' => 90,
-
-        ]
-    ],
-    '6_turn' => [
-        'direction' => 'right',
-        'turn_extent' => 20,
-    ]
+    '0_row' => ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green'],
+    '1_row' => ['green', 'yellow', 'yellow', 'yellow', 'yellow', 'yellow', 'yellow', 'green'],
+    '2_row' => ['green', 'yellow', 'red', 'red', 'red', 'red', 'yellow', 'green'],
+    '3_row' => ['green', 'yellow', 'red', 'yellow', 'yellow', 'red', 'yellow', 'green'],
+    '4_row' => ['green', 'yellow', 'red', 'yellow', 'yellow', 'red', 'yellow', 'green'],
+    '5_row' => ['green', 'yellow', 'red', 'red', 'red', 'red', 'yellow', 'green'],
+    '6_row' => ['green', 'yellow', 'yellow', 'yellow', 'yellow', 'yellow', 'yellow', 'green'],
+    '7_row' => ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green']
 ];
 
-var_dump ($array);
+var_dump($array);
 
 ?>
 <!DOCTYPE html>
