@@ -1,36 +1,39 @@
 <?php
 $array = [
-    '#1' => [
-        'pin_left' =>
-            [
-                'first_row' => [1, 0, 0, 1],
-                'second_row' => [0, 0, 1],
-                'fird_row' => [0, 1],
-                'fourth_row' => [1],
-                'track_clean' =>
-                    [
-                        'condition' => 'clean',
-                    ],
-            ],
+    '1_turn' => [
+        'direction' => 'right',
+        'turn_extent' => 90,
     ],
-    '#2' => [
-        'pin_left' =>
-            [
-                'first_row' => [0, 0, 0, 0],
-                'second_row' => [0, 0, 0],
-                'fird_row' => [0, 0],
-                'fourth_row' => [0],
-                'track_clean' =>
-                    [
-                        'condition' => 'dirty',
-                    ],
-            ],
+    '2_turn' => [
+        'direction' => 'left',
+        'turn_extent' => 45,
     ],
+    '3_turn' => [
+        'direction' => 'right',
+        'turn_extent' => 90,
+    ],
+    '4_turn' => [
+        'direction' => 'left',
+        'turn_extent' => 85,
+    ],
+    '5_turn' => [
+        [
+            'direction' => 'right',
+            'turn_extent' => 90
+        ],
+        [
+            'direction' => 'right',
+            'turn_extent' => 90,
+
+        ]
+    ],
+    '6_turn' => [
+        'direction' => 'right',
+        'turn_extent' => 20,
+    ]
 ];
 
-echo "<pre>";
-var_dump($array);
-echo "</pre>";
+var_dump ($array);
 
 ?>
 <!DOCTYPE html>
