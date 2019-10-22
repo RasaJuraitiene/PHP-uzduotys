@@ -2,7 +2,7 @@
 $my_memories = ['darbas', 'popkornai', 'namai', 'vaikai', 'penktadienio_filmas', 'non-alcoholic_drinks', 'bemieges_naktys',  'poilsis'];
 
 $h1 = 'Kas buvo penktadieni?!';
-$h2 = 'Rasos prisiminimai:'
+$h2 = 'Rasos prisiminimai:';
 ?>
 <!DOCTYPE html>
 
