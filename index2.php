@@ -1,17 +1,11 @@
 <?php
-$array = [
-    'name' => 'Teddy Bear',
-    'time' => 3,
-    'bottles' => 2,
-    'drunk' => true,
-    'vomit' => true,
-    'img' => "https://i.imgflip.com/o2hqs.jpg"
-];
+$my_memories = ['darbas', 'popkornai', 'namai', 'vaikai', 'penktadienio_filmas', 'non-alcoholic_drinks', 'bemieges_naktys',  'poilsis'];
 
-var_dump($array);
-
+$h1 = 'Kas buvo penktadieni?!';
+$h2 = 'Rasos prisiminimai:'
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -20,6 +14,14 @@ var_dump($array);
 </head>
 
 <body>
-<img src="<?php print $array['img']; ?>">
+
+<h1><?php print $h1; ?></h1>
+<h2><?php print $h2; ?></h2>
+<ul>
+    <?php foreach ($my_memories as $value): ?>
+    <li><?php print $value; ?></li>
+    <?php endforeach; ?>
+</ul>
+
 </body>
 </html>
